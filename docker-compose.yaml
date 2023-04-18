@@ -1,0 +1,7 @@
+version: '3'
+services:
+  simple-project:
+    image: vietthangc1/simple-project
+    ports:
+      - 4001:4001
+
