@@ -20,6 +20,6 @@ func main() {
 		})
 	})
 
-	router.Run(":4001")
+	router.Run(":80")
 
 }
