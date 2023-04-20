@@ -13,10 +13,16 @@ type ReturnMessage struct {
 
 func main() {
 	router := gin.Default()
+	router.GET("/", func (c *gin.Context) {
+		c.JSON(http.StatusFound, ReturnMessage{
+			Code: 200,
+			Message: "This is Homepage!",
+		})
+	})
 	router.GET("/home", func (c *gin.Context) {
 		c.JSON(http.StatusFound, ReturnMessage{
 			Code: 200,
-			Message: "Welcome!",
+			Message: "Welcome home!",
 		})
 	})
 
