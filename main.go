@@ -20,12 +20,6 @@ func main() {
 			Message: "This is Homepage!",
 		})
 	})
-	router.GET("/home", func(c *gin.Context) {
-		c.JSON(http.StatusFound, ReturnMessage{
-			Code:    200,
-			Message: "Welcome home!",
-		})
-	})
 	router.GET("/hello/:name", func(c *gin.Context) {
 		name := c.Param("name")
 		c.JSON(http.StatusFound, ReturnMessage{
